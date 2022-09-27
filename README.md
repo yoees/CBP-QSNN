@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ### CBP-QSNN-TSSL-BP
 Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
 To train a CBP-QSNN-TSSL-BP on CIFAR10,  
-- download fp32_pretrained models from [link]([https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing)) or get pretrained models from official implementation of [TSSL-BP](https://github.com/stonezwr/TSSL-BP)
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing) or get pretrained models from official implementation of [TSSL-BP](https://github.com/stonezwr/TSSL-BP)
 - save pretrained models to the trained_params directory.
 
 ```train
