@@ -49,6 +49,24 @@ python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 ```
 
+### CBP-QSNN-SNN-Calibration
+Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
+To train a CBP-QSNN-SNN-Calibration on CIFAR10/100,  
+- download ann_fp32_pretrained models from [link](https://drive.google.com/drive/folders/19cAxdCJC8L531clVHAa9VlZqE3dqyVkt?usp=sharing) or get pretrained models from official implementation of [SNN-Calibration](https://github.com/yhhhli/SNN_Calibration)
+- save pretrained models to the trained_params directory.
+
+```train
+## CIFAR10 (binary, ternary) ##
+python main_calibration_quantize_cbp.py --dataset CIFAR10 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant bin --lr 1e-2 --lr_lambda 1e-3 
+python main_calibration_quantize_cbp.py --dataset CIFAR10 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant ter --lr 1e-2 --lr_lambda 1e-3
+
+## CIFAR100 (binary, ternary) ##
+python main_calibration_quantize_cbp.py --dataset CIFAR100 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant bin --lr 1e-2 --lr_lambda 1e-3 
+python main_calibration_quantize_cbp.py --dataset CIFAR100 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant ter --lr 1e-2 --lr_lambda 1e-3
+```
+
+
+
 ## Evaluation
 
 To evaluate a DTS-SNN with zero sum temporal kernel on DVS128-Gesture or N-Cars or SHD, run this command:
