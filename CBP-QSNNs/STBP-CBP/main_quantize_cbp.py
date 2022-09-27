@@ -18,7 +18,7 @@ from q_model import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-parser = argparse.ArgumentParser(description='Pre-train')
+parser = argparse.ArgumentParser(description='')
 
 parser.add_argument('--gpu', type=str, default="0", help='GPU id to use')
 parser.add_argument('--dataset', type=str, default='CIFAR10', help='Which dataset to run (CIFAR10 or CIFAR100)')
