@@ -27,17 +27,6 @@ torch.backends.cudnn.benchmark = False
 import numpy as np
 np.random.seed(_seed_)
 
-
-'''
-### train ###
-python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant bin --period 20 (okay)
-python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant ter --period 20
-
-### test ###
-python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant bin (okay)
-python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant ter (okay)
-'''
-
 ### Utils for applying CBP ###
 
 def getparameters(model):
