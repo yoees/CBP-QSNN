@@ -23,7 +23,7 @@ class ActFun(torch.autograd.Function):
 act_fun = ActFun.apply
 
 
-### LIF neuron (hard reset) ###
+### LIF neuron ###
 def mem_update(decay, thresh, lens, ops, x, mem, spike):
     mem = mem * decay * (1. - spike) + ops(x)
     spike = act_fun(mem, thresh, lens) 
