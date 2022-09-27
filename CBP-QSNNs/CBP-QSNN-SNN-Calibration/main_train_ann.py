@@ -12,6 +12,10 @@ from torchvision.datasets import CIFAR10, CIFAR100
 from data.autoaugment import CIFAR10Policy, Cutout
 from CIFAR.models.vgg import VGG
 
+"""
+python main_train_ann.py --dataset CIFAR10 --arch VGG16 --dpath ./datasets
+python main_train_ann.py --dataset CIFAR100 --arch VGG16 --dpath ./datasets
+"""
 
 def seed_all(seed=1000):
     random.seed(seed)
@@ -166,8 +170,3 @@ if __name__ == '__main__':
             torch.save(ann.state_dict(), model_save_name)
         print('best_acc is: ', best_acc, ' find in epoch: ', best_epoch)
         print('\n\n')
-        
-"""
-python main_train.py --dataset CIFAR10 --arch VGG16 --dpath ./datasets  # lr=0.01 but In Paper.. lr=0.005
-python main_train.py --dataset CIFAR100 --arch VGG16 --dpath ./datasets
-"""
