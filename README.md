@@ -28,7 +28,7 @@ To train a CBP-QSNN-TSSL-BP on CIFAR10,
 - save pretrained models to the trained_params directory.
 
 ```train
-## CIFAR10 (binary, ternary) ##
+## AlexNet on CIFAR10 (binary, ternary) ##
 python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train
 python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ```
@@ -42,11 +42,11 @@ To train a CBP-QSNN-STBP on CIFAR10/100,
 - save pretrained models to the trained_params directory.
 
 ```train
-## CIFAR10 (binary, ternary) ##
+## 7Conv,3FC on CIFAR10 (binary, ternary) ##
 python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin
 python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 
-## CIFAR100 (binary, ternary) ##
+## 7Conv,3FC on CIFAR100 (binary, ternary) ##
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 ```
@@ -61,11 +61,11 @@ To train a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,
 - save pretrained models to the trained_params directory.
 
 ```train
-## DVS128Gesture (binary, ternary) ##
+## 7B-Net on DVS128Gesture (binary, ternary) ##
 python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant bin --period 20
 python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant ter --period 20
 
-## CIFAR10DVS (binary, ternary) ##
+## Wide-7B-Net on CIFAR10DVS (binary, ternary) ##
 python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20
 python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20
 ```
@@ -93,11 +93,11 @@ To train a CBP-QSNN-SNN-Calibration on CIFAR10/100,
 - save pretrained ann models to the trained_params directory.
 
 ```train
-## CIFAR10 (binary, ternary) ##
+## VGG16 on CIFAR10 (binary, ternary) ##
 python main_calibration_quantize_cbp.py --dataset CIFAR10 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant bin --lr 1e-2 --lr_lambda 1e-3 
 python main_calibration_quantize_cbp.py --dataset CIFAR10 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant ter --lr 1e-2 --lr_lambda 1e-3
 
-## CIFAR100 (binary, ternary) ##
+## VGG16 on CIFAR100 (binary, ternary) ##
 python main_calibration_quantize_cbp.py --dataset CIFAR100 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant bin --lr 1e-2 --lr_lambda 1e-3 
 python main_calibration_quantize_cbp.py --dataset CIFAR100 --arch VGG16 --T 32 --calib light --dpath ./datasets --device cuda:0 --opt SGD --quant ter --lr 1e-2 --lr_lambda 1e-3
 ```
