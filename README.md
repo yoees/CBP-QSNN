@@ -21,8 +21,8 @@ pip install -r requirements.txt
 ## Training
 
 ### CBP-QSNN-STBP
+To train a CBP-QSNN-STBP on CIFAR10/100, download fp32_pretrained parameters from [trained_params]https://drive.google.com/drive/folders/1xzUjkhWJMmZurKwFNbIevwMpR5Zhvzj1?usp=sharing:
 
-2. To train a STBP+CBP on CIFAR10/100, run this command:
 ```train
 ## CIFAR10 ##
 python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin
