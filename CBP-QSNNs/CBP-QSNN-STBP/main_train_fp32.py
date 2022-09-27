@@ -12,11 +12,8 @@ from functions import *
 from model import *
 
 """
-python main_train_fp32.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 (okay)
-python main_train_fp32.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 (okay)
-
-python main_train_fp32.py --dataset CIFAR10 --mode eval --decay 0.25 --thresh 0.5 --lens 0.5 --T 8  (okay)
-python main_train_fp32.py --dataset CIFAR100 --mode eval --decay 0.8 --thresh 0.5 --lens 0.5 --T 8  (okay)
+python main_train_fp32.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8
+python main_train_fp32.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8
 """
 
 
