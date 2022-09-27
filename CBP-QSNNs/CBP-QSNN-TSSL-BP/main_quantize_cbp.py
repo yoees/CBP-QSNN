@@ -226,6 +226,8 @@ if __name__ == '__main__':
     
     if not os.path.exists('./logs'):
         os.makedirs('./logs')
+    if not os.path.exists('./progress'):
+        os.makedirs('./progress')
  
     dataset, quant = config_path.split('/')[-1].split('.')[0].split('_')
     save_name = dataset + '_' + quant
