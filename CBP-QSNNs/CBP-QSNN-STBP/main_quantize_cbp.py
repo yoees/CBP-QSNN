@@ -15,23 +15,6 @@ from functions import *
 from q_module import *
 from q_model import *
 
-"""
-### train ###
-python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin (okay)
-python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter (okay)
-
-python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin (okay)
-python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter (okay)
-
-### eval ###
-python main_quantize_cbp.py --dataset CIFAR10 --mode eval --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin (okay)
-python main_quantize_cbp.py --dataset CIFAR10 --mode eval --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter (okay)
-
-python main_quantize_cbp.py --dataset CIFAR100 --mode eval --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin (okay)
-python main_quantize_cbp.py --dataset CIFAR100 --mode eval --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter (okay)
-
-"""
-
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
