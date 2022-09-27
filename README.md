@@ -20,6 +20,7 @@ pip install -r requirements.txt
 
 ## Training
 
+
 ### CBP-QSNN-TSSL-BP
 Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
 To train a CBP-QSNN-TSSL-BP on CIFAR10,  
@@ -31,6 +32,7 @@ To train a CBP-QSNN-TSSL-BP on CIFAR10,
 python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train
 python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ```
+
 
 
 ### CBP-QSNN-STBP
@@ -48,6 +50,25 @@ python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 ```
+
+
+
+### CBP-QSNN-SEW-ResNet
+Datasets = DVS128Gesture, CIFAR10DVS, ImageNet  
+Working directory = CBP-QSNNs/CBP-QSNN-SEW-ResNet/dataset_name  
+To train a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,  
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing) or get pretrained models from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
+- save pretrained models to the trained_params directory.
+
+```train
+## DVS128Gesture (binary, ternary) ##
+python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant bin --period 20
+python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant ter --period 20
+
+## CIFAR10DVS (binary, ternary) ##
+
+```
+
 
 ### CBP-QSNN-SNN-Calibration
 Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
