@@ -1,0 +1,7 @@
+pandas
+pycuda
+matplotlib
+tqdm
+pyyaml
+tensorboard
+scipy
