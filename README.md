@@ -1,7 +1,7 @@
 # CBP-QSNN
 This repository is the official implementation of **CBP-QSNN: Spiking Neural Networks quantized using constrained backpropagation**.
 
-## Requirements
+## Environments
 To install requirements:
 
 ```setup
