@@ -18,9 +18,9 @@ from q_module import *
 from spikingjelly.clock_driven.neuron import MultiStepParametricLIFNode
 from torch.autograd import Variable  # for lagrange multiplier
 
-_seed_ = 2022
+_seed_ = 2020
 import random
-random.seed(2022)
+random.seed(2020)
 
 torch.manual_seed(_seed_)  # use torch.manual_seed() to seed the RNG for all devices (both CPU and CUDA)
 torch.cuda.manual_seed_all(_seed_)
@@ -30,30 +30,6 @@ torch.backends.cudnn.benchmark = False
 import numpy as np
 np.random.seed(_seed_)
 
-'''
-### train ###
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20
-
-### test ###
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant bin (73.0)
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant ter (73.5)
-'''
-
-'''
-training
-
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20  73.4  # seed 2020
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:1 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20  74.3  # seed 2020
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20  73.3  # seed 2021
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:1 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20  73.8  # seed 2021
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20  72.9  # seed 2022
-python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:1 -b 16 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20  74.1  # seed 2022
-
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -b 50 -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant bin
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -b 50 -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant ter
-
-'''
 
 ### Utils for applying CBP ###
 
