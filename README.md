@@ -53,7 +53,7 @@ python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh
 Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
 To train a CBP-QSNN-SNN-Calibration on CIFAR10/100,  
 - download ann_fp32_pretrained models from [link](https://drive.google.com/drive/folders/19cAxdCJC8L531clVHAa9VlZqE3dqyVkt?usp=sharing) or get pretrained models from official implementation of [SNN-Calibration](https://github.com/yhhhli/SNN_Calibration)
-- save pretrained models to the trained_params directory.
+- save pretrained ann models to the trained_params directory.
 
 ```train
 ## CIFAR10 (binary, ternary) ##
