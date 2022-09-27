@@ -24,16 +24,6 @@ max_accuracy = 0
 min_loss = 1000
 
 
-"""
-### train ###
-python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train (okay) 76epoch 89.26
-python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
-
-### eval ###
-python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode eval  (okay) 89.99
-python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode eval  (okay) 88.79
-"""
-
 ### Utils for applying CBP ###
 
 def getparameters(network):
