@@ -5,3 +5,4 @@ tqdm
 pyyaml
 tensorboard
 scipy
+setuptools==59.5.0
