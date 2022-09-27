@@ -24,7 +24,7 @@ pip install -r requirements.txt
 Working directory = CBP-QSNNs/CBP-QSNN-STBP/  
 To train a CBP-QSNN-STBP on CIFAR10/100,  
 - download fp32_pretrained model from [link](https://drive.google.com/drive/folders/1xzUjkhWJMmZurKwFNbIevwMpR5Zhvzj1?usp=sharing) or get pretrained model by running main_train_fp32.py   
-- Save the pretrained model to the trained params directory.
+- save the pretrained model to the trained params directory.
 
 ```train
 ## CIFAR10 ##
