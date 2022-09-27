@@ -28,12 +28,8 @@ To train a CBP-QSNN-TSSL-BP on CIFAR10,
 
 ```train
 ## CIFAR10 (binary, ternary) ##
-python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin
-python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter
-
-## CIFAR100 (binary, ternary) ##
-python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
-python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
+python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train
+python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ```
 
 
