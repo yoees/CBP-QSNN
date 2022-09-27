@@ -3,6 +3,7 @@ This repository is the official implementation of **CBP-QSNN: Spiking Neural Net
 
 ## Environment
 
+Create virtual environment:
 ```setup
 conda create -n name python=3.8.12
 conda activate name
