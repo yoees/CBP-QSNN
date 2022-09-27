@@ -119,13 +119,3 @@ class constraint(Function):
             
         return grad_input, None, None, None, None
             
-            
-        
-    
-                                                                         
-    
-
-            
-        
-    
-
