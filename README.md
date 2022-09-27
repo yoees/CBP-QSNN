@@ -2,9 +2,12 @@
 This repository is the official implementation of **CBP-QSNN: Spiking Neural Networks quantized using constrained backpropagation**.
 
 ## Environments
-To install requirements:
 
 ```setup
+conda create -n name python=3.8.12
+conda activate name
+conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+
 pip install -r requirements.txt
 ```
 
