@@ -20,7 +20,8 @@ pip install -r requirements.txt
 
 ## Training
 
-#### CBP-QSNN-STBP
+### CBP-QSNN-STBP
+
 2. To train a STBP+CBP on CIFAR10/100, run this command:
 ```train
 ## CIFAR10 ##
