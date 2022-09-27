@@ -66,7 +66,8 @@ python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --c
 python main_quantize_cbp.py --tb --amp --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --epoch 200 --T_train 12 --T 16 --data-path ./datasets/DVS128Gesture --lr 0.1 --lr-lambda 0.01 --quant ter --period 20
 
 ## CIFAR10DVS (binary, ternary) ##
-
+python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant bin -period 20
+python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20
 ```
 
 
