@@ -20,6 +20,23 @@ pip install -r requirements.txt
 
 ## Training
 
+### CBP-QSNN-TSSL-BP
+Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
+To train a CBP-QSNN-TSSL-BP on CIFAR10,  
+- download fp32_pretrained models from [link]([https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing)) or get pretrained models from official implementation of [TSSL-BP](https://github.com/stonezwr/TSSL-BP)
+- save pretrained models to the trained_params directory.
+
+```train
+## CIFAR10 (binary, ternary) ##
+python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin
+python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter
+
+## CIFAR100 (binary, ternary) ##
+python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
+python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
+```
+
+
 ### CBP-QSNN-STBP
 Working directory = CBP-QSNNs/CBP-QSNN-STBP/  
 To train a CBP-QSNN-STBP on CIFAR10/100,  
