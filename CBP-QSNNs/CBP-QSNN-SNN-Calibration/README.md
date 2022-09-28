@@ -1,1 +1,1 @@
-This code is based on the official implementation of [SNN-Calibration](https://github.com/yhhhli/SNN_Calibration) and [CBP](https://github.com/dooseokjeong/CBP).
+This code is referred from the official implementation of SNN-Calibration [(https://github.com/yhhhli/SNN_Calibration)](https://github.com/yhhhli/SNN_Calibration) and CBP [(https://github.com/dooseokjeong/CBP)](https://github.com/dooseokjeong/CBP).
