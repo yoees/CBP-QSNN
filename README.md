@@ -25,6 +25,15 @@ To train a CBP-QSNN-TSSL-BP on CIFAR10,
 python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train
 python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ```
+To test a CBP-QSNN-TSSL-BP on CIFAR10,  
+- download prequantized models from [link](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing).
+- save prequantized models to the trained_params directory.
+
+```test
+## AlexNet on CIFAR10 (binary, ternary) ##
+python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode eval
+python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode eval
+```
 
 ### CBP-QSNN-STBP
 Working directory = CBP-QSNNs/CBP-QSNN-STBP/  
