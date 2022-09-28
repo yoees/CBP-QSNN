@@ -62,7 +62,7 @@ python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -devi
 ```
 
 To train a CBP-QSNN-SEW-ResNet on ImageNet,
-- get pretrained models('sew18_checkpoint_319.pth' and 'sew34_checkpoint_319.pth') from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
+- get pretrained models ('sew18_checkpoint_319.pth' and 'sew34_checkpoint_319.pth') from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
 - save pretrained models to the trained_params directory.
 - --quant : quantization level (binary, ternary)
 
