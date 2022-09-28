@@ -84,20 +84,6 @@ python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -devi
 python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -opt SGD -lr 0.1 -lr_lambda 0.01 -epochs 64 -quant ter -period 20
 ```
 
-To test a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,  
-- download prequantized models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing)
-- save pretrained models to the trained_params directory.
-
-```test
-## 7B-Net on DVS128Gesture (binary, ternary) ##
-python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant bin
-python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant ter
-
-## Wide-7B-Net on CIFAR10DVS (binary, ternary) ##
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant bin
-python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant ter
-```
-
 To train a CBP-QSNN-SEW-ResNet on ImageNet,
 - get pretrained models ('sew18_checkpoint_319.pth' and 'sew34_checkpoint_319.pth') from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet).   
 - save pretrained models to the trained_params directory.
@@ -111,6 +97,20 @@ python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cb
 ## SEW-ResNet34 on ImageNet (binary, ternary) ##
 python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cbp.py --model sew_resnet34 -b 32 --output-dir ./logs --tb --print-freq 128 --amp --cache-dataset --connect_f ADD --T 4 --lr 0.1 --lr_lambda 0.01 --epochs 100 --data-path ./datasets/imagenet --quant bin --period 20 --device cuda
 python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cbp.py --model sew_resnet34 -b 32 --output-dir ./logs --tb --print-freq 128 --amp --cache-dataset --connect_f ADD --T 4 --lr 0.1 --lr_lambda 0.01 --epochs 100 --data-path ./datasets/imagenet --quant ter --period 20 --device cuda
+```
+
+To test a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,  
+- download prequantized models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing)
+- save pretrained models to the trained_params directory.
+
+```test
+## 7B-Net on DVS128Gesture (binary, ternary) ##
+python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant bin
+python main_quantize_cbp.py --output-dir ./logs --model SEWResNet --connect_f ADD --device cuda:0 --data-path ./datasets/DVS128Gesture --test-only --quant ter
+
+## Wide-7B-Net on CIFAR10DVS (binary, ternary) ##
+python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant bin
+python main_quantize_cbp.py -out_dir ./logs -model SEWResNet -cnf ADD -device cuda:0 -data_dir ./datasets/CIFAR10DVS -test-only -quant ter
 ```
 
 To test a CBP-QSNN-SEW-ResNet on ImageNet,
