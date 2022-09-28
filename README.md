@@ -52,6 +52,20 @@ python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 ```
 
+To test a CBP-QSNN-STBP on CIFAR10/100,  
+- download prequantized models from [link](https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing).
+- save prequantized models to the trained_params directory.
+
+```test
+## 7Conv,3FC on CIFAR10 (binary, ternary) ##
+python main_quantize_cbp.py --dataset CIFAR10 --mode eval --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant bin
+python main_quantize_cbp.py --dataset CIFAR10 --mode eval --decay 0.25 --thresh 0.5 --lens 0.5 --T 8 --quant ter
+
+## 7Conv,3FC on CIFAR100 (binary, ternary) ##
+python main_quantize_cbp.py --dataset CIFAR100 --mode eval --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
+python main_quantize_cbp.py --dataset CIFAR100 --mode eval --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
+```
+
 ### CBP-QSNN-SEW-ResNet
 Datasets = DVS128Gesture, CIFAR10DVS, ImageNet  
 Working directory = CBP-QSNNs/CBP-QSNN-SEW-ResNet/dataset_name  
