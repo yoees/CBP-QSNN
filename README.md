@@ -13,10 +13,7 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-
-
 ## Training
-
 ### CBP-QSNN-TSSL-BP
 Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
 To train a CBP-QSNN-TSSL-BP on CIFAR10,  
