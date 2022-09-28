@@ -49,7 +49,7 @@ python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh
 Datasets = DVS128Gesture, CIFAR10DVS, ImageNet  
 Working directory = CBP-QSNNs/CBP-QSNN-SEW-ResNet/dataset_name  
 To train a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,  
-- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing) or get pretrained models from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing) or get pretrained models from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
 - save pretrained models to the trained_params directory.
 
 ```train
