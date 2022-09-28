@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ### CBP-QSNN-TSSL-BP
 Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
 To train a CBP-QSNN-TSSL-BP on CIFAR10,  
-- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing) or get pretrained models from official implementation of [TSSL-BP](https://github.com/stonezwr/TSSL-BP)
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/10XZeHHdLH82All1QJAcorJyWHtoUyrCv?usp=sharing) or get pretrained models from official implementation of [TSSL-BP](https://github.com/stonezwr/TSSL-BP).
 - save pretrained models to the trained_params directory.
 
 ```train
@@ -29,7 +29,7 @@ python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ### CBP-QSNN-STBP
 Working directory = CBP-QSNNs/CBP-QSNN-STBP/  
 To train a CBP-QSNN-STBP on CIFAR10/100,  
-- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing) or get pretrained models by running main_train_fp32.py   
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1WOP2qFUCGkXJsMyzukqi2sDAZv4ol73g?usp=sharing) or get pretrained models by running main_train_fp32.py.   
 - save pretrained models to the trained_params directory.
 - --quant : quantization level (binary, ternary)
 
@@ -47,7 +47,7 @@ python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh
 Datasets = DVS128Gesture, CIFAR10DVS, ImageNet  
 Working directory = CBP-QSNNs/CBP-QSNN-SEW-ResNet/dataset_name  
 To train a CBP-QSNN-SEW-ResNet on DVS128Gesture/CIFAR10DVS,  
-- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing) or get pretrained models from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
+- download fp32_pretrained models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing) or get pretrained models from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet).   
 - save pretrained models to the trained_params directory.
 - --quant : quantization level (binary, ternary)
 
@@ -62,7 +62,7 @@ python main_quantize_cbp.py -amp -out_dir ./logs -model SEWResNet -cnf ADD -devi
 ```
 
 To train a CBP-QSNN-SEW-ResNet on ImageNet,
-- get pretrained models ('sew18_checkpoint_319.pth' and 'sew34_checkpoint_319.pth') from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet)   
+- get pretrained models ('sew18_checkpoint_319.pth' and 'sew34_checkpoint_319.pth') from official implementation of [SEW-ResNet](https://github.com/fangwei123456/Spike-Element-Wise-ResNet).   
 - save pretrained models to the trained_params directory.
 - --quant : quantization level (binary, ternary)
 
@@ -79,7 +79,7 @@ python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cb
 ### CBP-QSNN-SNN-Calibration
 Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
 To train a CBP-QSNN-SNN-Calibration on CIFAR10/100,  
-- download ann_fp32_pretrained models from [link](https://drive.google.com/drive/folders/19cAxdCJC8L531clVHAa9VlZqE3dqyVkt?usp=sharing) or get pretrained models from official implementation of [SNN-Calibration](https://github.com/yhhhli/SNN_Calibration)
+- download ann_fp32_pretrained models from [link](https://drive.google.com/drive/folders/19cAxdCJC8L531clVHAa9VlZqE3dqyVkt?usp=sharing) or get pretrained models from official implementation of [SNN-Calibration](https://github.com/yhhhli/SNN_Calibration).
 - save pretrained ann models to the trained_params directory.
 - --quant : quantization level (binary, ternary)
 
