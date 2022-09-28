@@ -113,6 +113,20 @@ python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cb
 python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cbp.py --model sew_resnet34 -b 32 --output-dir ./logs --tb --print-freq 128 --amp --cache-dataset --connect_f ADD --T 4 --lr 0.1 --lr_lambda 0.01 --epochs 100 --data-path ./datasets/imagenet --quant ter --period 20 --device cuda
 ```
 
+To test a CBP-QSNN-SEW-ResNet on ImageNet,
+- download prequantized models from [link](https://drive.google.com/drive/folders/1nq5NMVrlxlsjM2yd3GpYW3O5MLuHSC7j?usp=sharing).   
+- save prequantized models to the trained_params directory.
+
+```test
+## SEW-ResNet18 on ImageNet (binary, ternary) ##
+python main_quantize_cbp.py --model sew_resnet18 --test-only --output-dir ./logs --print-freq 1024 --cache-dataset --connect_f ADD --T 4 --data-path ./datasets/imagenet --quant bin --device cuda:0 
+python main_quantize_cbp.py --model sew_resnet18 --test-only --output-dir ./logs --print-freq 1024 --cache-dataset --connect_f ADD --T 4 --data-path ./datasets/imagenet --quant ter --device cuda:0
+
+## SEW-ResNet34 on ImageNet (binary, ternary) ##
+python main_quantize_cbp.py --model sew_resnet34 --test-only --output-dir ./logs --print-freq 1024 --cache-dataset --connect_f ADD --T 4 --data-path ./datasets/imagenet --quant bin --device cuda:0
+python main_quantize_cbp.py --model sew_resnet34 --test-only --output-dir ./logs --print-freq 1024 --cache-dataset --connect_f ADD --T 4 --data-path ./datasets/imagenet --quant ter --device cuda:0
+```
+
 ### CBP-QSNN-SNN-Calibration
 Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
 To train a CBP-QSNN-SNN-Calibration on CIFAR10/100,  
