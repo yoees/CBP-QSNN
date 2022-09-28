@@ -1,10 +1,7 @@
 # CBP-QSNN
 This repository is the official implementation of **CBP-QSNN: Spiking Neural Networks quantized using constrained backpropagation**.
 
-
-
 ## Environment
-
 Create virtual environment:
 ```setup
 conda create -n name python=3.8.12
@@ -20,7 +17,6 @@ pip install -r requirements.txt
 
 ## Training
 
-
 ### CBP-QSNN-TSSL-BP
 Working directory = CBP-QSNNs/CBP-QSNN-TSSL-BP/  
 To train a CBP-QSNN-TSSL-BP on CIFAR10,  
@@ -32,8 +28,6 @@ To train a CBP-QSNN-TSSL-BP on CIFAR10,
 python main_quantize_cbp.py -config Networks/CIFAR10_bin.yaml -mode train
 python main_quantize_cbp.py -config Networks/CIFAR10_ter.yaml -mode train
 ```
-
-
 
 ### CBP-QSNN-STBP
 Working directory = CBP-QSNNs/CBP-QSNN-STBP/  
@@ -50,8 +44,6 @@ python main_quantize_cbp.py --dataset CIFAR10 --mode train --decay 0.25 --thresh
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant bin
 python main_quantize_cbp.py --dataset CIFAR100 --mode train --decay 0.8 --thresh 0.5 --lens 0.5 --T 8 --quant ter
 ```
-
-
 
 ### CBP-QSNN-SEW-ResNet
 Datasets = DVS128Gesture, CIFAR10DVS, ImageNet  
@@ -83,8 +75,6 @@ python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cb
 python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cbp.py --model sew_resnet34 -b 32 --output-dir ./logs --tb --print-freq 128 --amp --cache-dataset --connect_f ADD --T 4 --lr 0.1 --lr_lambda 0.01 --epochs 100 --data-path ./datasets/imagenet --quant bin --period 20 --device cuda
 python -m torch.distributed.launch --nproc_per_node=2 --use_env main_quantize_cbp.py --model sew_resnet34 -b 32 --output-dir ./logs --tb --print-freq 128 --amp --cache-dataset --connect_f ADD --T 4 --lr 0.1 --lr_lambda 0.01 --epochs 100 --data-path ./datasets/imagenet --quant ter --period 20 --device cuda
 ```
-
-
 
 ### CBP-QSNN-SNN-Calibration
 Working directory = CBP-QSNNs/CBP-QSNN-SNN-Calibration/  
