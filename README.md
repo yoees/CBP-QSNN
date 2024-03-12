@@ -20,7 +20,6 @@ In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13
   Volume    = {13},
   Number    = {4},
   pages     = {1137--1146},
-
 }
 ```
 
