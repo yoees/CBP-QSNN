@@ -8,7 +8,7 @@ The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/1030
 
 ## Citation ##
 Donghyung Yoo and Doo Seok Jeong. "CBP-QSNN: Spiking Neural Networks Quantized Using Constrained Backpropagation." 
-In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 4, pp. 1137-1146. 2023.
+In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 4, pp. 1137-1146, 2023.
 
 ```bibtex
 @article{Yoo2023,
