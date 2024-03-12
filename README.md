@@ -1,11 +1,11 @@
 # CBP-QSNN
 This repository is the official implementation of **CBP-QSNN: Spiking Neural Networks quantized using constrained backpropagation**.
 
-The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf).
+The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf). \n
 The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/10302274).
 
 ## Citation ##
-Donghyung Yoo and Doo Seok Jeong. "CBP-QSNN: Spiking Neural Networks Quantized Using Constrained Backpropagation." \\
+Donghyung Yoo and Doo Seok Jeong. "CBP-QSNN: Spiking Neural Networks Quantized Using Constrained Backpropagation." 
 In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 4, pp. 1137-1146. 2023.
 
 ```bibtex
