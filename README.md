@@ -5,8 +5,6 @@ This repository is the official implementation of **CBP-QSNN: Spiking Neural Net
 Guhyun Kim and Doo Seok Jeong. "CBP: backpropagation with constraint on weight precision using a pseudo-Lagrange multiplier method." 
 In Advances in Neural Information Processing Systems, vol. 34, pp. 28274-28285, 2021.
 
-The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf).
-
 ```bibtex
 @inproceedings{Kim2021,
   Author     = {Kim, Guhyun and Jeong, Doo Seok},
@@ -17,11 +15,10 @@ The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file
   Year       = {2021},
 }
 ```
+The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf).
 
 Donghyung Yoo and Doo Seok Jeong. "CBP-QSNN: Spiking Neural Networks Quantized Using Constrained Backpropagation." 
 In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 4, pp. 1137-1146, 2023.
-
-The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/10302274).
 
 ```bibtex
 @article{Yoo2023,
@@ -35,6 +32,7 @@ The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/1030
   Year      = {2023},
 }
 ```
+The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/10302274).
 
 ## Environment
 Create virtual environment:
