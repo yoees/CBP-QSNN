@@ -12,12 +12,12 @@ In Advances in Neural Information Processing Systems, vol. 34, pp. 28274-28285, 
 
 ```bibtex
 @inproceedings{Kim2021,
-  Author      = {Kim, Guhyun and Jeong, Doo Seok},
-  Title       = {CBP: backpropagation with constraint on weight precision using a pseudo-Lagrange multiplier method},
-  Booktitle   = {ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS 34},
-  Volume      = {34},
-  pages       = {28274--28285},
-  Year        = {2021},
+  Author     = {Kim, Guhyun and Jeong, Doo Seok},
+  Title      = {CBP: backpropagation with constraint on weight precision using a pseudo-Lagrange multiplier method},
+  Booktitle  = {ADVANCES IN NEURAL INFORMATION PROCESSING SYSTEMS 34},
+  Volume     = {34},
+  pages      = {28274--28285},
+  Year       = {2021},
 }
 ```
 
