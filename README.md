@@ -15,7 +15,7 @@ In Advances in Neural Information Processing Systems, vol. 34, pp. 28274-28285, 
   Year       = {2021},
 }
 ```
-    The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf).
+  The CBP paper is available [here](https://proceedings.neurips.cc/paper/2021/file/edea298442a67de045e88dfb6e5ea4a2-Paper.pdf).
 
 - Donghyung Yoo and Doo Seok Jeong. "CBP-QSNN: Spiking Neural Networks Quantized Using Constrained Backpropagation." 
 In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 4, pp. 1137-1146, 2023.
@@ -32,7 +32,7 @@ In IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13
   Year      = {2023},
 }
 ```
-    The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/10302274).
+  The CBP-QSNN paper is available [here](https://ieeexplore.ieee.org/document/10302274).
 
 ## Environment
 Create virtual environment:
